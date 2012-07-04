@@ -13,17 +13,17 @@ When the method is called, it dynamically loads the script.
 
 "useAjax" is valid in only script, but step execution maybe unavailable.
 
-$.dynamicExtend({
-	method: '/path/to/script.js'
-});
-
-$.dynamicExtend({
-	method: {
-		url: '/path/to/script.js',
-		before: beforeCallbacks,
-		after: afterCallbacks
-	}
-});
+	$.dynamicExtend({
+		method: '/path/to/script.js'
+	});
+	
+	$.dynamicExtend({
+		method: {
+			url: '/path/to/script.js',
+			before: beforeCallbacks,
+			after: afterCallbacks
+		}
+	});
 
 
 ## $.loadFile()
@@ -33,11 +33,11 @@ Load external file, support script(.js) and style(.css).
 Step execution of the script is available.
 "useAjax" is valid in only script, but step execution maybe unavailable.
 
-$.loadFile('/path/to/script.js').done(function(){});
-
-$.loadFile({
-	url: '/path/to/script',
-	type: 'script'
-});
-
-$.loadFile('/path/to/style.css');
+	$.loadFile('/path/to/script.js').done(function(){});
+	
+	$.loadFile({
+		url: '/path/to/script',
+		type: 'script'
+	});
+	
+	$.loadFile('/path/to/style.css');
