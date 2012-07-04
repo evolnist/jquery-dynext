@@ -41,13 +41,3 @@ $.loadFile({
 });
 
 $.loadFile('/path/to/style.css');
-
-
-Live versions of demos from this repository can be found at [http://evolnist.github.com/jquery-dynext/demos/step-by-step.html] (http://evolnist.github.com/jquery-dynext/demos/step-by-step.html).
-
-<p>The beta1 version of jQuery DynamicExtend is available on CDN at:
-<ul>
-<li><a href="http://ajax.evol-ni.com/ajax/jquery.dynamicextend/beta1/jquery.dynext.js">http://ajax.evol-ni.com/ajax/jquery.dynamicextend/beta1/jquery.dynext.js</a></li>
-<li><a href="http://ajax.evol-ni.com/ajax/jquery.dynamicextend/beta1/jquery.dynext.min.js">http://ajax.evol-ni.com/ajax/jquery.dynamicextend/beta1/jquery.dynext.min.js</a></li>
-</ul></p>
-
