@@ -1,5 +1,6 @@
-/**
+/*!
  * jQuery DynamicExtend Plugin
+ * https://github.com/evolnist/jquery-dynext
  *
  * You can do jQuery.fn.extend() dynamically, and load external file.
  *
