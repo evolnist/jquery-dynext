@@ -92,13 +92,13 @@ Code of the project somewhere.
 		
 		Class.prototype.lightbox = function() {
 			if (0 < $('.lightbox').length) {
-				$('.lightbox').lightbox(); // Just load external files.
+				$('.lightbox').lightbox(); // The external file will be loaded at this time.
 			}
 		};
 		
 		Class.prototype.tile = function(selector, columns) {
 			if (0 < $(selector).length) {
-				$(selector).tile(columns); // Just load external file.
+				$(selector).tile(columns); // The external file will be loaded at this time.
 			}
 		};
 		
