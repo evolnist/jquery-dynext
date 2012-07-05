@@ -52,7 +52,12 @@ Step execution of the script is available.
 
 Code of the project somewhere.
 
-/js/main.js
+/index.html
+
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+
+/js/common.js
 
 	function main() {
 		var app = new App();
@@ -69,7 +74,7 @@ Code of the project somewhere.
 				lightbox: {
 					url: '/js/jquery.lightbox.js',
 					after: [
-						'/css/jquery.lightbox.css',
+						'/css/jquery.lightbox.css'
 					]
 				}
 			});
