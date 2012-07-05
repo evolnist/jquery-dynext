@@ -67,9 +67,9 @@ Code of the project somewhere.
 			$.dynamicExtend({
 				tile: '/js/jquery.tile.js',
 				lightbox: {
-					url: '',
+					url: '/js/jquery.lightbox.js',
 					after: [
-						'',
+						'/css/jquery.lightbox.css',
 					]
 				}
 			});
