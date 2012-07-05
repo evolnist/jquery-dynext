@@ -4,7 +4,7 @@ _Note: This plugin use jQuery Deferred object. Requires jQuery version 1.5.0._
 
 ----
 
-You can do jQuery.fn.extend() dynamically, and load external file.
+You can do `jQuery.fn.extend()` dynamically, and load external file.
 
 
 ## $.dynamicExtend()
@@ -22,8 +22,8 @@ When the method is called, it dynamically loads the script.
 	$.dynamicExtend({
 		method: {
 			url: '/path/to/script',
-			before: beforeCallbacks,
-			after: afterCallbacks
+			before: beforeCallback, // callback or url list
+			after: afterCallback // callback or url list
 		}
 	});
 
@@ -46,3 +46,22 @@ Step execution of the script is available.
 	
 	// Load CSS example (type auto detect by file extension)
 	$.loadFile('/path/to/style.css');
+
+
+---
+
+Code of the project somewhere.
+
+	$(document).ready(function(){
+		$.when(
+			$.getScript('/js/jquery.dynext.js')
+		).done(function(){
+			$.dynamicExtend({
+				tile: '/js/jquery.tile.js'
+			});
+		}).pipe(function(){
+			return $.loadFile('/js/lib/App.js');
+		}).done(function(){
+			main();
+		});
+	});
