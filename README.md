@@ -52,8 +52,12 @@ Step execution of the script is available.
 
 Code of the project somewhere.
 
+/js/main.js
+
 	function main() {
 		var app = new App();
+		app.lightbox();
+		app.tile('.twoColumns .entry', 2);
 	}
 	
 	$(document).ready(function(){
@@ -61,7 +65,13 @@ Code of the project somewhere.
 			$.getScript('/js/jquery.dynext.js')
 		).done(function(){
 			$.dynamicExtend({
-				tile: '/js/jquery.tile.js'
+				tile: '/js/jquery.tile.js',
+				lightbox: {
+					url: '',
+					after: [
+						'',
+					]
+				}
 			});
 		}).pipe(function(){
 			return $.loadFile('/js/lib/App.js');
@@ -69,3 +79,28 @@ Code of the project somewhere.
 			main();
 		});
 	});
+
+/js/lib/App.js
+
+	var App = (function(){
+		function Class() {
+			this.construct();
+		}
+		
+		Class.prototype.construct = function() {
+		};
+		
+		Class.prototype.lightbox = function() {
+			if (0 < $('.lightbox').length) {
+				$('.lightbox').lightbox(); // Just load external files.
+			}
+		};
+		
+		Class.prototype.tile = function(selector, columns) {
+			if (0 < $(selector).length) {
+				$(selector).tile(columns); // Just load external file.
+			}
+		};
+		
+		return Class;
+	})();
