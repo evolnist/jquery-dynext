@@ -52,6 +52,10 @@ Step execution of the script is available.
 
 Code of the project somewhere.
 
+	function main() {
+		var app = new App();
+	}
+	
 	$(document).ready(function(){
 		$.when(
 			$.getScript('/js/jquery.dynext.js')
