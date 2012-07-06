@@ -50,7 +50,7 @@ Step execution of the script is available.
 
 ---
 
-Code of the project somewhere.
+Code of someone.
 
 /index.html
 
