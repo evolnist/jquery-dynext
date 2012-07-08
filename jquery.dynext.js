@@ -56,17 +56,22 @@ var DynamicExtend = (function(){
 			fns[method] = function(){
 				var _t = this, _a = arguments;
 
-				$.loadFile(options, useAjax).done(function(){
-					$.fn[method].apply(_t, _a);
-				});
-
-				$.fn[method] = function(){
+				var pushQueue = function(){
 					var _t = this, _a = arguments;
 					var url = (typeof options == 'object') ? options.url : options;
 					_this.cache(url).done(function(){
 						$.fn[method].apply(_t, _a);
 					});
 				};
+				$.fn[method] = pushQueue;
+
+				$.loadFile(options, useAjax).done(function(){
+					if ($.fn[method] == pushQueue) {
+						$.fn[method] = null;
+						return;
+					}
+					$.fn[method].apply(_t, _a);
+				});
 				return this;
 			};
 		});
