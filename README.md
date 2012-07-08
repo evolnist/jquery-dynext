@@ -71,8 +71,8 @@ Code of someone.
 		).done(function(){
 			$.dynamicExtend({
 				tile: '/js/jquery.tile.js',
-				lightbox: {
-					url: '/js/jquery.lightbox.js',
+				lightBox: {
+					url: '/js/jquery.lightbox.min.js',
 					after: [
 						'/css/jquery.lightbox.css'
 					]
