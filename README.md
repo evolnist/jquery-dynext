@@ -95,9 +95,9 @@ Code of someone.
 		Class.prototype.construct = function() {
 		};
 		
-		Class.prototype.lightbox = function() {
-			if (0 < $('.lightbox').length) {
-				$('.lightbox').lightbox(); // The external file will be loaded at this time.
+		Class.prototype.lightBox = function() {
+			if (0 < $('a[rel*=lightbox]').length) {
+				$('a[rel*=lightbox]').lightBox(); // The external file will be loaded at this time.
 			}
 		};
 		
