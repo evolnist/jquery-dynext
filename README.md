@@ -61,7 +61,7 @@ Code of someone.
 
 	function main() {
 		var app = new App();
-		app.lightbox();
+		app.lightBox();
 		app.tile('.twoColumns .entry', 2);
 	}
 	
