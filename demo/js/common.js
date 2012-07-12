@@ -2,8 +2,7 @@
 
 function main() {
 	var app = new App();
-	app.lightBox();
-	app.tile('.twoColumns .entry', 2);
+	app.mailto();
 }
 
 $(document).ready(function(){
@@ -11,13 +10,8 @@ $(document).ready(function(){
 		$.getScript('../jquery.dynext.js')
 	).done(function(){
 		$.dynamicExtend({
-			tile: 'js/jquery.tile.js',
-			lightBox: {
-				url: 'js/jquery.lightbox.min.js',
-				after: [
-					'css/jquery.lightbox.css'
-				]
-			}
+			exists: 'js/jquery.exists.js',
+			mailto: 'js/jquery.mailto.js'
 		});
 	}).pipe(function(){
 		return $.loadFile('js/lib/App.js');

@@ -2,27 +2,21 @@ var App;
 
 (function($){
 
-App = (function(){
-	function Class() {
-		this.construct();
-	}
-	
-	Class.prototype.construct = function() {
-	};
-	
-	Class.prototype.lightBox = function() {
-		if (0 < $('a[rel*=lightbox]').length) {
-			$('a[rel*=lightbox]').lightBox(); // The external file will be loaded at this time.
+	App = (function(){
+		function Class() {
+			this.construct();
 		}
-	};
-	
-	Class.prototype.tile = function(selector, columns) {
-		if (0 < $(selector).length) {
-			$(selector).tile(columns); // The external file will be loaded at this time.
-		}
-	};
-	
-	return Class;
-})();
+		
+		Class.prototype.construct = function() {
+		};
+		
+		Class.prototype.mailto = function() {
+			if ($('.mailto').exists()) { // 'jquery.exists.js' will be loaded at this time.
+				$('.mailto').mailto(); // 'jquery.mailto.js' will be loaded at this time.
+			}
+		};
+		
+		return Class;
+	})();
 
 })(jQuery);
